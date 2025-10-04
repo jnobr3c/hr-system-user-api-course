@@ -1,7 +1,7 @@
 package br.com.josenobre.userapi;
 
 import br.com.josenobre.userapi.domain.User;
-import br.com.josenobre.userapi.repositories.UseRepository;
+import br.com.josenobre.userapi.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -13,7 +13,7 @@ import java.util.List;
 public class UserApiApplication  implements CommandLineRunner {
 
     @Autowired
-    private UseRepository userRepository;
+    private UserRepository userRepository;
 
 	public static void main(String[] args) {
 		SpringApplication.run(UserApiApplication.class, args);
