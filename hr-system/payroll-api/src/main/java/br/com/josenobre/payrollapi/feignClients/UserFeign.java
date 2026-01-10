@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
-@FeignClient(name = "user-api", url = "localhost:8000") //a aplicação user-api precisa estar rodando na porta 8000 para funcionar
+@FeignClient(name = "user-api") // só passar o nome do serviço e ja faz o balanceamento de carga
+//@FeignClient(name = "user-api", url = "localhost:8000") //a aplicação user-api precisa estar rodando na porta 8000 para funcionar
 public interface UserFeign {
 
     @GetMapping(value = "/api/users/{id}")
